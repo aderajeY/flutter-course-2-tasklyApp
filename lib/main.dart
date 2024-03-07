@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-//git hub issues
-// this fixes the issue
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Placeholder(),
+      home: const Placeholder(),
     );
   }
 }
