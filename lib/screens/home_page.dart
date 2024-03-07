@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: _todoList(),
+      floatingActionButton: _addtodo(),
     );
   }
 
@@ -123,6 +124,14 @@ class _HomePageState extends State<HomePage> {
           ),
         )
       ],
+    );
+  }
+
+  Widget _addtodo() {
+    return FloatingActionButton(
+      onPressed: () {},
+      child: const Icon(Icons.add),
+      
     );
   }
 }
