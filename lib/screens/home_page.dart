@@ -130,8 +130,9 @@ class _HomePageState extends State<HomePage> {
   Widget _addtodo() {
     return FloatingActionButton(
       onPressed: () {},
-      child: const Icon(Icons.add),
-      
+      child: const Icon(
+        Icons.add,
+      ),
     );
   }
 }
