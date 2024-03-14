@@ -11,10 +11,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late double _deviceWidth, _deviceHeight;
+  String? _newTodo;
+
   @override
   Widget build(BuildContext context) {
     _deviceHeight = MediaQuery.of(context).size.height;
     _deviceWidth = MediaQuery.of(context).size.width;
+    print("input value: $_newTodo");
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
@@ -129,10 +132,25 @@ class _HomePageState extends State<HomePage> {
 
   Widget _addtodo() {
     return FloatingActionButton(
-      onPressed: () {},
+      onPressed: _displayTodo,
       child: const Icon(
         Icons.add,
       ),
+    );
+  }
+
+  void _displayTodo() {
+    showDialog(
+      context: context,
+      builder: (BuildContext _context) {
+        return AlertDialog(
+          title: const Text('Add new todo'),
+          content: TextField(
+            onSubmitted: (_value) => _value,
+            onChanged: (_value) => {_newTodo = _value},
+          ),
+        );
+      },
     );
   }
 }
